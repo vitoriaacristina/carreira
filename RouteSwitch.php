@@ -23,9 +23,9 @@
         require __DIR__ . '/pages/empresa/empresa_controller.php';
         $controller = new EmpresaController();
         if ($operation==null || $operation=="") {
-            $controller->listar();
+            $controller->listar();    
         } else {
-        $controller->$operation();
+            $controller->$operation();
         }
         require __DIR__ . '/pages/empresa/index.php';
     }

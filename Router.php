@@ -12,15 +12,15 @@ class Router extends RouterSwitch
 
         error_log("Rota requisitada: $route",0);
         $parts = explode("/",$route); // quebrando a requisição
+        error_log("Partes da requisição: ".print_r($parts,true),0);
 
-        error_log("Partes da requisão: ".print_r($parts,true),0);
 
         // obtenho a pagina
         $page = $parts[0]; 
 
         // obtenho a operação se for solicitada
-        $operation = count ($parts)>1?$parts[1]:null;
-
+        $operation = count($parts)>1?$parts[1]:null; 
+        
         if ($route == '') {
             $this->home();
         } else {
